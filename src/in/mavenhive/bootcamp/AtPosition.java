@@ -11,7 +11,7 @@ class AtPosition {
     }
 
     AtPosition move(Facing direction) {
-        switch (direction){
+        switch (direction) {
             case NORTH: return new AtPosition(xCoOrdinate, yCoOrdinate + 1);
             case EAST: return new AtPosition(xCoOrdinate + 1, yCoOrdinate);
             case SOUTH: return new AtPosition(xCoOrdinate, yCoOrdinate - 1);
@@ -20,7 +20,6 @@ class AtPosition {
         }
     }
 
-    
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

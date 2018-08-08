@@ -63,7 +63,7 @@ class RoverTest {
     }
 
     @Test
-    void expectRoverToTurnWesttFromSouthWhenAskedToTurnRight() {
+    void expectRoverToTurnWestFromSouthWhenAskedToTurnRight() {
         Rover roverOne = new Rover(new AtPosition(2,2), Facing.SOUTH);
         Rover roverTwo = new Rover(new AtPosition(2,2), Facing.WEST);
         assertEquals(roverTwo, roverOne.turnRight());

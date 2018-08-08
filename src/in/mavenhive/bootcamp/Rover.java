@@ -18,7 +18,7 @@ class Rover {
     }
 
     Rover turnRight() {
-        return new Rover(position, direction.toRight()) ;
+        return new Rover(position, direction.toRight());
     }
 
     Rover advance() {

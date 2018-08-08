@@ -12,6 +12,10 @@ class Rover {
         this.direction = direction;
     }
 
+    Rover turnLeft() {
+        return new Rover(position, direction.toLeft());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -21,4 +25,11 @@ class Rover {
                 direction == rover.direction;
     }
 
+    @Override
+    public String toString() {
+        return "Rover{" +
+                "position=" + position +
+                ", direction=" + direction +
+                '}';
+    }
 }

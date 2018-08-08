@@ -1,13 +1,10 @@
 package in.mavenhive.bootcamp;
 
-import java.util.Objects;
-
 class AtPosition {
     private final int xCoOrdinate;
     private final int yCoOrdinate;
 
     AtPosition(int xCoOrdinate, int yCoOrdinate) {
-
         this.xCoOrdinate = xCoOrdinate;
         this.yCoOrdinate = yCoOrdinate;
     }
@@ -21,4 +18,11 @@ class AtPosition {
                 yCoOrdinate == that.yCoOrdinate;
     }
 
+    @Override
+    public String toString() {
+        return "AtPosition{" +
+                "xCoOrdinate=" + xCoOrdinate +
+                ", yCoOrdinate=" + yCoOrdinate +
+                '}';
+    }
 }

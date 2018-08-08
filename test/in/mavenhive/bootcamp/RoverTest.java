@@ -47,4 +47,25 @@ class RoverTest {
         Rover roverTwo = new Rover(new AtPosition(5, 5), Facing.SOUTH);
         assertEquals(roverTwo, roverOne.turnLeft());
     }
+
+    @Test
+    void expectRoverToTurnWestFromNorthWhenAskedToTurnLeft() {
+        Rover roverOne = new Rover(new AtPosition(3,4), Facing.NORTH);
+        Rover roverTwo = new Rover(new AtPosition(3,4), Facing.WEST);
+        assertEquals(roverTwo, roverOne.turnLeft());
+    }
+
+    @Test
+    void expectRoverToTurnEastFromNorthWhenAskedToTurnRight() {
+        Rover roverOne = new Rover(new AtPosition(2,2), Facing.NORTH);
+        Rover roverTwo = new Rover(new AtPosition(2,2), Facing.EAST);
+        assertEquals(roverTwo, roverOne.turnRight());
+    }
+
+    @Test
+    void expectRoverToTurnWesttFromSouthWhenAskedToTurnRight() {
+        Rover roverOne = new Rover(new AtPosition(2,2), Facing.SOUTH);
+        Rover roverTwo = new Rover(new AtPosition(2,2), Facing.WEST);
+        assertEquals(roverTwo, roverOne.turnRight());
+    }
 }

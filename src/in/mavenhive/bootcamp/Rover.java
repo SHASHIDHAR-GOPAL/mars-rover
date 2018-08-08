@@ -16,6 +16,10 @@ class Rover {
         return new Rover(position, direction.toLeft());
     }
 
+    Rover turnRight() {
+        return new Rover(position, direction.toRight()) ;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -2,6 +2,7 @@ package in.mavenhive.bootcamp;
 
 import java.util.Objects;
 
+// Represents an automated motor vehicle on a two dimensional plane with the sense of direction.
 class Rover {
 
     private final AtPosition position;
@@ -18,6 +19,10 @@ class Rover {
 
     Rover turnRight() {
         return new Rover(position, direction.toRight()) ;
+    }
+
+    Rover advance() {
+        return new Rover(position.move(direction), direction);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package in.mavenhive.bootcamp;
 
+// Understands the direction of the rover.
 enum Facing {
     NORTH,
     EAST,

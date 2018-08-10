@@ -11,7 +11,7 @@ class AtPosition {
     }
 
     AtPosition move(Facing direction) {
-        return newPosition(direction, xCoOrdinate, yCoOrdinate);
+        return direction.newPosition(xCoOrdinate, yCoOrdinate);
     }
 
     @Override
@@ -29,10 +29,5 @@ class AtPosition {
                 "xCoOrdinate=" + xCoOrdinate +
                 ", yCoOrdinate=" + yCoOrdinate +
                 '}';
-    }
-
-    private static AtPosition newPosition(Facing direction, int xCoOrdinate, int yCoOrdinate) {
-        return new AtPosition(xCoOrdinate + direction.advanceFactorForXAxis(),
-                yCoOrdinate + direction.advanceFactorForYAxis());
     }
 }

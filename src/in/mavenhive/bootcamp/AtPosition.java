@@ -2,7 +2,6 @@ package in.mavenhive.bootcamp;
 
 // Understands the location of the rover on a two dimensional plane.
 class AtPosition {
-    private static final int ADVANCE_FACTOR = 1;
     private final int xCoOrdinate;
     private final int yCoOrdinate;
 
@@ -12,17 +11,7 @@ class AtPosition {
     }
 
     AtPosition move(Facing direction) {
-        switch (direction) {
-            case NORTH: return newPosition(xCoOrdinate, yCoOrdinate + ADVANCE_FACTOR);
-            case EAST: return newPosition(xCoOrdinate + ADVANCE_FACTOR, yCoOrdinate);
-            case SOUTH: return newPosition(xCoOrdinate, yCoOrdinate - ADVANCE_FACTOR);
-            case WEST: return newPosition(xCoOrdinate - ADVANCE_FACTOR, yCoOrdinate);
-            default: return this;
-        }
-    }
-
-    private static AtPosition newPosition(int xCoOrdinate, int yCoOrdinate) {
-        return new AtPosition(xCoOrdinate, yCoOrdinate);
+        return newPosition(direction, xCoOrdinate, yCoOrdinate);
     }
 
     @Override
@@ -40,5 +29,10 @@ class AtPosition {
                 "xCoOrdinate=" + xCoOrdinate +
                 ", yCoOrdinate=" + yCoOrdinate +
                 '}';
+    }
+
+    private static AtPosition newPosition(Facing direction, int xCoOrdinate, int yCoOrdinate) {
+        return new AtPosition(xCoOrdinate + direction.advanceFactorForXAxis(),
+                yCoOrdinate + direction.advanceFactorForYAxis());
     }
 }

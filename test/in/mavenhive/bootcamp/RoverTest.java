@@ -20,8 +20,8 @@ class RoverTest {
 
     @Test
     void expectRoverToNotChangePositionAndFaceSouthGivenNoCommands() {
-        Rover roverOne = new Rover(atPosition(5, 0), Facing.SOUTH);
-        Rover roverTwo = new Rover(atPosition(5, 0), Facing.SOUTH);
+        Rover roverOne = new Rover(atPosition(0, 0), Facing.SOUTH);
+        Rover roverTwo = new Rover(atPosition(0, 0), Facing.SOUTH);
         assertEquals(roverOne, roverTwo);
     }
 

@@ -2,16 +2,16 @@ package in.mavenhive.bootcamp;
 
 // Understands the location of the rover on a two dimensional plane.
 class AtPosition {
-    private final int xCoOrdinate;
-    private final int yCoOrdinate;
+    private final int xCoordinate;
+    private final int yCoordinate;
 
-    AtPosition(int xCoOrdinate, int yCoOrdinate) {
-        this.xCoOrdinate = xCoOrdinate;
-        this.yCoOrdinate = yCoOrdinate;
+    AtPosition(int xCoordinate, int yCoordinate) {
+        this.xCoordinate = xCoordinate;
+        this.yCoordinate = yCoordinate;
     }
 
     AtPosition move(Facing direction) {
-        return direction.newPosition(xCoOrdinate, yCoOrdinate);
+        return direction.newPosition(xCoordinate, yCoordinate);
     }
 
     @Override
@@ -19,15 +19,15 @@ class AtPosition {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         AtPosition that = (AtPosition) o;
-        return xCoOrdinate == that.xCoOrdinate &&
-                yCoOrdinate == that.yCoOrdinate;
+        return xCoordinate == that.xCoordinate &&
+                yCoordinate == that.yCoordinate;
     }
 
     @Override
     public String toString() {
         return "AtPosition{" +
-                "xCoOrdinate=" + xCoOrdinate +
-                ", yCoOrdinate=" + yCoOrdinate +
+                "xCoordinate=" + xCoordinate +
+                ", yCoordinate=" + yCoordinate +
                 '}';
     }
 }

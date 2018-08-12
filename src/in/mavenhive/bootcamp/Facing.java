@@ -29,7 +29,8 @@ enum Facing {
         this.advanceFactorForYAxis = advanceFactorForYAxis;
     }
 
-    public AtPosition newPosition(int xCoOrdinate, int yCoOrdinate) {
-        return new AtPosition(xCoOrdinate + advanceFactorForXAxis, yCoOrdinate + advanceFactorForYAxis);
+    public AtPosition newPosition(int xCoordinate, int yCoordinate) {
+        return new AtPosition(xCoordinate + advanceFactorForXAxis,
+                              yCoordinate + advanceFactorForYAxis);
     }
 }

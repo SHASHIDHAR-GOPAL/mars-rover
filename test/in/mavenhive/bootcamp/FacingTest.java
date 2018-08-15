@@ -27,6 +27,26 @@ class FacingTest {
     }
 
     @Test
+    void expectHalfRightOfNorthToBeNorthEast() {
+        assertEquals(Facing.NORTH_EAST, Facing.NORTH.toHalfRight());
+    }
+
+    @Test
+    void expectHalfLeftOfNorthToBeNorthWest() {
+        assertEquals(Facing.NORTH_WEST, Facing.NORTH.toHalfLeft());
+    }
+
+    @Test
+    void expectHalfLeftOfSouthToBeSouthEast() {
+        assertEquals(Facing.SOUTH_EAST, Facing.SOUTH.toHalfLeft());
+    }
+
+    @Test
+    void expectHalfRightOfSouthToBeSouthWest() {
+        assertEquals(Facing.SOUTH_WEST, Facing.SOUTH.toHalfRight());
+    }
+
+    @Test
     void expectCorrectPositionGivenMoveAlongSouth() {
         AtPosition positionBeforeMove = new AtPosition(3, 4);
         AtPosition positionAfterMove = new AtPosition(3, 3);
